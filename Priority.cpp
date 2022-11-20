@@ -39,14 +39,14 @@ void get_tat_time(int tat[],int wt[]){
     }
 }
 
-void findgc(){
+void priorityscheduling(){
     int wt[50],tat[50];
     double wavg=0,tavg=0;
 
     get_wt_time(wt);
     get_tat_time(tat,wt);
 	
-    int stime[50],ctime[50];
+    int ctime[50];
 
     for(int i=0;i<totalprocess;i++){
 		ctime[i] = tat[i] + proc[i].at;
@@ -70,7 +70,7 @@ void findgc(){
 
 int main(){
 
-    int arrivaltime[] = {1, 2, 3, 4,5};
+    int arrivaltime[] = {1, 2, 2, 4,5};
     int bursttime[] = { 3, 5, 1, 7, 4 };
     int priority[] = { 3, 4, 1, 7, 8 };
         
@@ -86,7 +86,7 @@ int main(){
         cout<<proc[i].at<<" "<<proc[i].bt<<" "<<proc[i].pr<<" "<<proc[i].pno<<endl;
     }
 
-    findgc();
+    priorityscheduling();
 
     return 0;
 }
