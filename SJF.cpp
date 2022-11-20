@@ -8,8 +8,7 @@ struct Process {
 	int art; 
 };
 
-void findWaitingTime(Process proc[], int n,
-								int wt[])
+void findWaitingTime(Process proc[], int n,int wt[])
 {
 	int rt[n];
 
